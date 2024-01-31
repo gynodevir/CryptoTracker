@@ -1,0 +1,14 @@
+/* Corrected CSS class name */
+.tradingview-widget-container {
+    background-color: aquamarine;
+    height: 200%;
+    width: 20%;
+}
+
+.tradingview-widget-container__widget {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+}
