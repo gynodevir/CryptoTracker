@@ -42,6 +42,7 @@ const Home = ({setSymbol}) => {
 
   return (
     <div className='coin-app'>
+        <div class="glitch" data-text="GLITCH">Crypto Tracker</div>
       <div className='coin-search'>
         <h1 className='coin-text'>Search a coin</h1>
         <form>
