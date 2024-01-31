@@ -11,7 +11,7 @@ function TradingViewWidget({symbol}) {
     navigate('/Trading');
   };
   const goToHomePage = () => {
-    navigate('/');
+    navigate('/CryptoTracker');
   };
   const container = useRef();
 

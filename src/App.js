@@ -1,18 +1,20 @@
 import './App.css';
 import React, { useState } from 'react';
 import TradingViewWidget from './components/TradingViewWidget';
-import Home from './components/Home';
+import Home from "../src/components/Home";
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import axios from 'axios';
+
 
 function App() {
   const [symbol,setSymbol] =useState("")
   return (
     <div className="App">
     
+    
       <Router>
         <Routes>
-          <Route path="/" element={<Home  setSymbol={setSymbol}/>} />
+          <Route path="/CryptoTracker" element={<Home  setSymbol={setSymbol}/>} />
           <Route path="/Trading" element={<TradingViewWidget symbol={symbol} />} />
         </Routes>
       </Router>
