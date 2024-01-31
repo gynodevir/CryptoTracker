@@ -9,6 +9,7 @@ function App() {
   const [symbol,setSymbol] =useState("")
   return (
     <div className="App">
+      <div class="glitch" data-text="GLITCH">Crypto Tracker</div>
       <Router>
         <Routes>
           <Route path="/" element={<Home  setSymbol={setSymbol}/>} />

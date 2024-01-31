@@ -1,6 +1,7 @@
 // TradingViewWidget.jsx
 import React, { useEffect, useRef, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
+import "./TradingViewWidget.css"
 
 function TradingViewWidget({symbol}) {
   const navigate = useNavigate();
@@ -67,7 +68,10 @@ function TradingViewWidget({symbol}) {
   return (
 
     <>
-  <button onClick={goToHomePage}>Prev</button>
+   <div class="glitch" data-text="GLITCH">This is the Chart</div>
+
+  <button onClick={goToHomePage} className='cybr-btn' >Prev <span aria-hidden class="cybr-btn__glitch">Prev</span>
+  <span aria-hidden class="cybr-btn__tag">R25</span></button>
   <div className="tradingview-widget-container" ref={container} style={{ position: "fixed", height: "60%", width: "100%"}}>
     <div className="tradingview-widget-container__widget" style={{ height: "70%", width: "100%" }}></div>
   </div>

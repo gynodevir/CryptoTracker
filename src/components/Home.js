@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Coin from './Coin';
+import './Home.css'
 
 
 const Home = ({setSymbol}) => {
@@ -54,7 +55,7 @@ const Home = ({setSymbol}) => {
       </div>
        {filteredCoins.map((coin) => {
         return (
-          <div key={coin.id} onClick={()=>tradingPage(coin.symbol)}>
+          <div key={coin.id} onClick={()=>tradingPage(coin.symbol)} className='c-cont'>
             
             <Coin
               name={coin.name}
