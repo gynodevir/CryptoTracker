@@ -9,7 +9,7 @@
     justify-content: start;
     align-items: center;
     height: 80px;
-    border-bottom: 1px solid #d7d7d7;
+    border-bottom: 1px solid #faf6f6;
     width: 900px;
   }
   
@@ -73,13 +73,71 @@
   /* Container for the coin row */
   .coin-row {
     display: flex;
-    margin-left: 10%;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-left: 70%;
     height: 40px;
     border-bottom: 1px solid #d7d7d7;
-    width: 40%;
+    width: 100%;
+   
+    
+   
+    
+
     /* Adjusted width to fill the entire width of the screen */
   }
 
   /* Individual coin element */
   
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .coin-row {
+     
+      margin-left: 10%;
+      
+     
+      
+     
+      
+  
+      /* Adjusted width to fill the entire width of the screen */
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .coin-row {
+      margin-left: 20%;
+     
+      
+     
+      
+  
+      /* Adjusted width to fill the entire width of the screen */
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .coin-row {
+      margin-left: 10%;
+     
+      
+     
+      
+  
+      /* Adjusted width to fill the entire width of the screen */
+    }
 }
