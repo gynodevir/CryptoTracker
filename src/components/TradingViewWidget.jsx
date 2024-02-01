@@ -23,7 +23,7 @@ function TradingViewWidget({symbol}) {
       script.async = true;
       script.innerHTML = `
         {
-          "autosize": true,
+          "autosize": false,
           "symbol": "${symbol}",
           "interval": "1S",
           "timezone": "Etc/UTC",
@@ -67,15 +67,16 @@ function TradingViewWidget({symbol}) {
 
   return (
 
-    <>
+    <div>
    <div class="glitch" data-text="GLITCH">This is the Chart</div>
-
-  <button onClick={goToHomePage} className='cybr-btn' >Prev <span aria-hidden class="cybr-btn__glitch">Prev</span>
+   <button onClick={goToHomePage} className='cybr-btn' >Prev <span aria-hidden class="cybr-btn__glitch">Prev</span>
   <span aria-hidden class="cybr-btn__tag">R25</span></button>
-  <div className="tradingview-widget-container" ref={container} style={{ position: "fixed", height: "60%", width: "100%"}}>
-    <div className="tradingview-widget-container__widget" style={{ height: "70%", width: "100%" }}></div>
-  </div>
-</>
+  
+  <div className="tradingview-widget-container" ref={container} style={{ position : "absolute",marginTop : "20px", height : "30%", width : "100%"}}>
+  <div className="tradingview-widget-container__widget" style={{ height : "70%" ,width : "100%" }}></div>
+</div>
+
+</div>
 
   );
 }
