@@ -19,15 +19,27 @@ const Home = ({setSymbol}) => {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=INR&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en')
-      .then((response) => {
-        const data = response.data;
-        console.log(data);
-        setCoin(data); // Update the state with the fetched data
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
+    const fetchData = () => {
+      axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=INR&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en')
+        .then((response) => {
+          const data = response.data;
+          console.log(data);
+          setCoin(data); // Update the state with the fetched data
+        })
+        .catch((error) => {
+          console.error('Error fetching data:', error);
+        });
+    };
+    fetchData();
+
+    // Set up an interval to call the API every one minute (60000 milliseconds)
+    const intervalId = setInterval(fetchData, 60000);
+  
+    // Clean up the interval on component unmount
+    //  clearInterval(intervalId);
+    return ()=>{
+      clearInterval(intervalId);
+    }
   }, []);
 
   const handleChange = (e) => {
